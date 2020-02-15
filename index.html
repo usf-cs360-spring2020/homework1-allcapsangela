@@ -2,6 +2,18 @@
 <html>
   <head>
     <meta charset="utf-8">
+
+    <style> /* set the CSS */
+
+    .bar { fill: steelblue; }
+
+    .grid line {
+      stroke: lightgrey;
+      stroke-opacity: 0.7;
+      shape-rendering: crispEdges;
+    }
+
+    </style>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- TODO: Change title -->
@@ -65,24 +77,14 @@
             </a>
 
             <div class="navbar-dropdown">
-              <a class="navbar-item">
-                <span class="icon"><i class="fas fa-chart-line"></i></span>
-                <span>Line Chart</span>
+              <a class="navbar-item" href="#chart1">
+                <span>Bar Graph: 2018 Region</span>
               </a>
-              <a class="navbar-item">
-                <span class="icon"><i class="fas fa-chart-area"></i></span>
-                <span>Area Chart</span>
+              <a class="navbar-item" href="#chart2">
+                <span>Pie Chart: 2018 Region</span>
               </a>
-
-              <hr class="navbar-divider">
-
-              <a class="navbar-item">
-                <span class="icon"><i class="fas fa-chart-bar"></i></span>
-                <span>Bar Chart</span>
-              </a>
-              <a class="navbar-item">
-                <span class="icon"><i class="fas fa-chart-pie"></i></span>
-                <span>Pie Chart</span>
+              <a class="navbar-item" href="#chart3">
+                <span>Bar Chart: 2018 International Passengers</span>
               </a>
             </div>
           </div>
@@ -91,7 +93,7 @@
         <!-- Right navbar items -->
         <div class="navbar-end">
           <!-- TODO: Update as needed -->
-          <a class="navbar-item" href="#about" title="About">
+          <a class="navbar-item" href="#grade" title="About">
             <span class="icon"><i class="fas fa-tasks"></i></span>
             <span>Grade</span>
           </a>
@@ -121,7 +123,7 @@
 
         <h2 id="data">Data</h2>
 
-        <p>The data is about monthly passenger activity at San Francisco International Airport, separated by airline. ADD MORE INFO source, size, license, and when you accessed it.</p>
+        <p>The data is about monthly passenger activity at San Francisco International Airport, separated by airline. The full dataset is available online <a href="https://data.sfgov.org/Transportation/Air-Traffic-Passenger-Statistics/rkru-6vcg/data">here</a>. It's updated quarterly, and has over 21.k rows (per the assignment spec) of data dating back to 2005.</p>
 
         <blockquote>
           <p>
@@ -144,12 +146,12 @@
 
         <h3 id="wrangling">Wrangling</h3>
 
-        <p>In general, I rolled up data by certain categories (either GEO Summary or GEO Region), summed up passenger count, and filtered on Activity Period to get 2018 data only. More specific wrangling will follow each visualization.
+        <p>In general, I rolled up data by certain categories (either GEO Summary or GEO Region), summed up passenger count accordingly, and filtered on Activity Period to get 2018 data only. More specific wrangling will follow each visualization.
 
         <h2 id="visualizations">Visualizations</h2>
 
         <h3 id="chart1">Chart #1</h3>
-        <img src="StackedBars.png" height="500" width="960">
+        <img src="linegraph.png" height="500" width="960">        
 
         <h3 id="chart2">Chart #2</h3>
 
@@ -158,7 +160,7 @@
         <h4>Tableau Prototype</h4>
         <img src="tableau-piechart.png" height="500" width="960">
         <h4>D3 Chart</h4>
-        <div id="chart" style="height:500px; width:960px;"></div>
+        <div id="chartA" style="height:500px; width:960px;"></div>
         <script src="https://d3js.org/d3.v5.min.js"></script>
         <script src="piechart.js">    </script>
         <h4>Conclusions</h4>
@@ -169,20 +171,24 @@
         <h4>Tableau Prototype</h4>
         <img src="InternationalBarChart.png" height="500" width="960">
         <h4>D3 Chart</h4>
+        <div id="chartB" style="height:500px; width:960px;"></div>
+        <script src="bargraph.js">  </script>
         <h4>Conclusions</h4>
         <span class="heading">Acknowledgements</span>
 
         <p>
-          <a href="https://travishorn.com/self-contained-d3-pie-chart-function-e5b7422be676">Pie Chart Reference</a><br/>
+          <a href="https://travishorn.com/self-contained-d3-pie-chart-function-e5b7422be676">Pie Chart Reference</a>
         </p>
-
+        <p><a href="https://bl.ocks.org/d3noob/bdf28027e0ce70bd132edc64f1dd7ea4">Bar Graph Reference (modified for v5)</a></p>
+        <p><a href="https://bl.ocks.org/mbostock/9764126">Axis Tick marks</a></p>
+        <p><a href="https://bl.ocks.org/d3noob/c506ac45617cf9ed39337f99f8511218">Grid lines</a></p>
         <p class="is-6">
           <em>Thanks to Prof. Sophie Engle for her assignment to do something with the visualization.</em>
         </p>
 
         <h2 id="grade">Grade</h2>
 
-        I aimed for an A grade with three Tableau prototypes and two D3 visualizations.
+        I aimed for an A grade with three Tableau prototypes and two D3 visualizations, but I freely recognize there's plenty of room for improvement.
 
         <h2 id="about">About</h2>
 
@@ -214,13 +220,9 @@
               <div class="heading">Skills</div>
 
               <div class="tags">
-                <span class="tag">Python</span>
-                <span class="tag">C</span>
-                <span class="tag">Java</span>
-                <span class="tag">JavaScript</span>
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
-                <span class="tag">SVG</span>
+                <span class="tag">Procrastinating</span>
+                <span class="tag">Petting Dogs</span>
+                <span class="tag">Eating Bread</span>
               </div>
             </div>
           </div>

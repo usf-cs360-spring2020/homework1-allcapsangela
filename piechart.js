@@ -15,7 +15,7 @@ const pieChart = (selector, data) => {
 
   //var titleText = text.attr("x", 10).attr("y", 10).text("SFO 2018").attr("font-size", "20px");
   //var title = container.selectAll("text").enter().append("text");
-  
+
   const plotArea = chart.append('g')
     .attr('transform', `translate(${230}, ${130})`);
 
@@ -74,4 +74,4 @@ const data = [
   { Region: "US", Passengers: 43489998 }
 ];
 
-pieChart('#chart', data);
+pieChart('#chartA', data);
