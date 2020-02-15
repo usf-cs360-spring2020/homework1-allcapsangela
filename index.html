@@ -155,6 +155,8 @@
 
         <h3 id="chart2">Chart #2</h3>
 
+        <p>Passenger count is encoded by area of the pie chart, so larger areas represent more passengers.</p>
+
         <h4>Wrangling</h4>
         <p>I filtered on Activity Period to get 2018 data only, and rolled up on GEO Region, summing passenger counts (I did not wrangle to normalize days of the month or to account for travellers in transit). Sorting by alphabetical order on region, as compared to sorting by passenger count, conveniently arranged the categories in an order that allowed enough space for the labels to be placed more or less neatly. I took the values from the CSV and pasted them directly into the HTML file, since I was having some issues with data scopes on the code I used as reference.
         </p>
@@ -168,6 +170,7 @@
         <p>There was no activity from Africa or South America (that made the cutoff when the data was rolled up), but this makes sense in that one would expect passengers to first transfer through other airports, considering geography. Despite the fact that SFO is an international airport, there's much more US traffic than international traffic. I was surprised that there's more traffic from Asia than our neighbors Canada or Mexico, but this must be another result of geography; possibly the majority of Canadian or Mexican travellers prefer to transfer through closer airports like Seattle or Los Angeles first.</p>
 
         <h3 id="chart3"> Chart #3</h3>
+        <p>Passenger count is encoded by area of bars (height), so taller bars have more passengers.</p>
         <h4>Wrangling</h4>
         <p>This is the same dataset as used in the pie chart, but with the value for the US removed, so we could better focus on international travel. Again, the data was hardcoded into bargraph.js as JSON (a casualty of adapting the example I used from d3 v4 to v5).</p>
         <h4>Tableau Prototype</h4>
