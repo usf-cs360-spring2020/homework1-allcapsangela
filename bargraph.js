@@ -90,6 +90,15 @@ const barGraph = (selector) => {
         //.attr("y", height + margin.top + 10)
         .text("2018 SFO International Travel");
 
+        svg.append("text")
+            .attr("text-anchor", "start")
+            .attr("x", 10)
+            .attr("y", height + margin.top + 10)
+            .text("Source: Air Traffic Passenger Statistics from https://data.sfgov.org/Transportation/Air-Traffic-Passenger-Statistics/rkru-6vcg");
+
+
+        //Source: Air Traffic Passenger Statistics from https://data.sfgov.org/Transportation/Air-Traffic-Passenger-Statistics/rkru-6vcg
+
 }
 
 barGraph('#chartB');
